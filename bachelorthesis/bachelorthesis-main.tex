@@ -1,0 +1,44 @@
+\include{settings}
+
+\begin{document}
+
+	\include{title-page}
+
+	\pagenumbering{roman}
+
+	\tableofcontents
+	\newpage
+	\pagestyle{headings}
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+	\parskip1.5ex 
+
+	\include{abstract} 
+	\include{acknowledgements}  
+
+	\addcontentsline{toc}{chapter}{Abbreviations}
+
+	\include{abbreviations}
+
+	\include{chapters/introduction-motivation}      
+	\include{chapters/problem-statement}           
+	\include{chapters/foundation-context}
+	\include{chapters/conception}
+	\include{chapters/prototypal-implemtation}
+	\include{chapters/evaluation}
+	\include{chapters/summary}
+
+	\addcontentsline{toc}{chapter}{List of Figures}
+	\listoffigures
+
+	\addcontentsline{toc}{chapter}{List of Tables}
+	\listoftables
+
+	\addcontentsline{toc}{chapter}{\bibname}
+	\bibliography{biblio}
+
+	\begin{appendix}
+		\include{appendix} 
+	\end{appendix}
+
+\end{document}
